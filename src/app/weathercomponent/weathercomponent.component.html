@@ -1,0 +1,11 @@
+<p>weathercomponent works!</p>
+<form>
+    <input type="text" name="city" placeholder="Enter city Name" [(ngModel)]="city">
+    <button type="button" (click)="getWeather()">Get Weather</button>
+</form>
+<div *ngIf="weatherData">
+    <h2>{{weatherData.name}}</h2>
+    <h2>{{weatherData.main.temp}}</h2>
+    <p>{{weatherData.main.humidity}}</p>
+    <p>{{weatherData.weather[0].description}}</p>
+</div>
